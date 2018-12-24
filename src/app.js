@@ -17,9 +17,9 @@ store.subscribe(() => {
     console.log(visibleState);
 });
 
-store.dispatch(addExpense({ description: "Water bill", amount: 10000, createdAt: 20000 }));
+store.dispatch(addExpense({ description: "Water bill", amount: 10000, createdAt: 200000 }));
 store.dispatch(addExpense({ description: "Gas bill", amount: 5000, createdAt: 25000 }));
-store.dispatch(setTextFilter("gas"));
+store.dispatch(setTextFilter("bill"));
 
 const jsx = (
     <Provider store={store}>
