@@ -7,7 +7,7 @@ export class AddExpensePage extends React.Component {
     onSubmit = (expense) => {
         //call onSubmit in ExpenseForm to pass in data to AddExpensePage because we want ExpenseForm to be reusable
         //props.dispatch(addExpense(expense));
-        this.props.onSubmit(expense);
+        this.props.addExpense(expense);
         this.props.history.push("/");
     };
 
@@ -35,7 +35,7 @@ export class AddExpensePage extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSubmit: (expense) => dispatch(addExpense(expense))
+        addExpense: (expense) => dispatch(addExpense(expense))
     };
 };
 
