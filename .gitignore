@@ -1,5 +1,7 @@
 node_modules/
 public/dist/
+public/bundle.*
+public/styles.*
 src/playground/
 .env.test
 .env.development
