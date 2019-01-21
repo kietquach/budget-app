@@ -13,7 +13,9 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-export { firebase, database as default };
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+export { firebase, googleAuthProvider, database as default };
 
 //get from database and convert into array
 /*database.ref("expenses").once("value").then((snapshot) => {
